@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ListViewSample"
+             xmlns:syncfusion="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+             xmlns:dataSource="clr-namespace:Syncfusion.DataSource;assembly=Syncfusion.DataSource.Portable"
+             x:Class="ListViewSample.MainPage">
+  
+    <ContentPage.BindingContext>
+    <local:ListViewModel x:Name="viewModel"/>
+  </ContentPage.BindingContext>
+
+    <syncfusion:SfListView x:Name="listView" SelectionMode="None" AutoFitMode="None" 
+                         ItemsSource="{Binding OuterList}" ItemSize="130">
+
+        <syncfusion:SfListView.ItemTemplate>
+            <DataTemplate>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="70" />
+                    </Grid.RowDefinitions>
+                    <Label Text="{Binding Label}" BackgroundColor="LightGray" VerticalOptions="FillAndExpand" FontSize="Large"/>
+                    <syncfusion:SfListView Grid.Row="1" ItemsSource="{Binding InnerList}" HeightRequest="60" ItemSize="100"
+                                           Orientation="Horizontal">
+                        <syncfusion:SfListView.ItemTemplate>
+                            <DataTemplate>
+                                <Image Source="{Binding Image}" HeightRequest="70" WidthRequest="70" />
+                            </DataTemplate>
+                        </syncfusion:SfListView.ItemTemplate>
+                    </syncfusion:SfListView>
+                </Grid>
+            </DataTemplate>
+        </syncfusion:SfListView.ItemTemplate>
+        
+    </syncfusion:SfListView>
+</ContentPage>
