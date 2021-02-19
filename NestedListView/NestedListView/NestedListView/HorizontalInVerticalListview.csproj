@@ -39,8 +39,6 @@
     <None Remove="Images\Image7.png" />
     <None Remove="Images\Image8.png" />
     <None Remove="Images\Image9.png" />
-    <None Remove="Images\NotSelected.png" />
-    <None Remove="Images\Selected.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -73,12 +71,10 @@
     <EmbeddedResource Include="Images\Image7.png" />
     <EmbeddedResource Include="Images\Image8.png" />
     <EmbeddedResource Include="Images\Image9.png" />
-    <EmbeddedResource Include="Images\NotSelected.png" />
-    <EmbeddedResource Include="Images\Selected.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="17.1.0.49" />
-    <PackageReference Include="Xamarin.Forms" Version="3.6.0.344457" />
+    <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="18.4.0.35" />
+    <PackageReference Include="Xamarin.Forms" Version="4.5.0.617" />
   </ItemGroup>
 </Project>
